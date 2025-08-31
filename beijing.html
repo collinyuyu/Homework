@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover China - Beijing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="beijing.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#457B9D',
+                        accent: '#F1FAEE',
+                        dark: '#1D3557',
+                        light: '#A8DADC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-accent text-dark overflow-x-hidden">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white text-shadow flex items-center">
+                <i class="fa fa-pagelines mr-2"></i>Discover China
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-light transition-colors">Home</a>
+                <a href="beijing.html" class="nav-link text-white hover:text-light transition-colors active">Beijing</a>
+                <a href="tokyo.html" class="nav-link text-white hover:text-light transition-colors">Tokyo</a>
+                <a href="seoul.html" class="nav-link text-white hover:text-light transition-colors">Seoul</a>
+                <a href="bangkok.html" class="nav-link text-white hover:text-light transition-colors">Bangkok</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark/90 bg-blur">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Home</a>
+                <a href="beijing.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2 active">Beijing</a>
+                <a href="tokyo.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Tokyo</a>
+                <a href="seoul.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Seoul</a>
+                <a href="bangkok.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Bangkok</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Beijing Page Content -->
+    <section id="beijing" class="min-h-screen bg-white py-24">
+        <div class="container mx-auto px-4">
+            <!-- City Header -->
+            <div class="relative h-96 rounded-2xl overflow-hidden mb-16">
+                <img src="https://plus.unsplash.com/premium_photo-1723433351351-0f6cd5d21537?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beijing cityscape" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-dark/20"></div>
+                <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 class="text-[clamp(2rem,6vw,4rem)] font-bold text-white text-shadow mb-4">Beijing</h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-white text-shadow max-w-2xl">
+                        The capital city where ancient history meets modern innovation, home to iconic landmarks and rich cultural heritage.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- City Introduction -->
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Beijing, the capital of China, is a city where millennia of history meet cutting-edge modernity. As one of the world's oldest continuously inhabited cities, it boasts an unparalleled collection of historical and cultural sites, while also showcasing China's rapid development and innovation.
+                </p>
+            </div>
+            
+            <!-- Attractions -->
+            <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-center mb-12">
+                Top Attractions
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Attraction 1 -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-lg group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547150492-da7ff1742941?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The Great Wall of China" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="https://www.travelchinaguide.com/china_great_wall/scene/beijing/" class="text-primary hover:underline" target="_blank">The Great Wall</a>
+                        </h3>
+                        <p class="text-gray-700 mb-4">One of the Seven Wonders of the World, this ancient defensive structure stretches over 13,000 miles and offers breathtaking views.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker mr-2 text-primary"></i>
+                            <span>50 miles northwest of Beijing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Attraction 2 -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-lg group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1577706881850-bf7c7d8906a5?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forbidden City in Beijing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="https://www.travelchinaguide.com/cityguides/beijing/forbidden.htm" class="text-primary hover:underline" target="_blank">Forbidden City</a>
+                        </h3>
+                        <p class="text-gray-700 mb-4">The imperial palace complex served as the home of Chinese emperors for nearly 500 years and is the world's largest ancient palace.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker mr-2 text-primary"></i>
+                            <span>Central Beijing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Attraction 3 -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-lg group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584872589930-e99fe5bf4408?q=80&w=1754&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Temple of Heaven in Beijing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="https://www.travelchinaguide.com/attraction/beijing/heaven/" class="text-primary hover:underline" target="_blank">Temple of Heaven</a>
+                        </h3>
+                        <p class="text-gray-700 mb-4">A UNESCO World Heritage site where emperors of the Ming and Qing dynasties prayed for good harvests.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker mr-2 text-primary"></i>
+                            <span>Southeastern Beijing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Travel Tips -->
+            <div class="mt-16 bg-light/50 rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-6">Travel Tips for Beijing</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-primary">
+                            <i class="fa fa-clock-o text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Best Time to Visit</h4>
+                            <p class="text-gray-700">Spring (April-May) and autumn (September-October) offer the most pleasant weather.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-primary">
+                            <i class="fa fa-subway text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Getting Around</h4>
+                            <p class="text-gray-700">Beijing has an excellent subway system that's affordable and covers most tourist areas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-primary">
+                            <i class="fa fa-cutlery text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Local Cuisine</h4>
+                            <p class="text-gray-700">Try Peking duck, dumplings, and hot pot for an authentic Beijing culinary experience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-primary">
+                            <i class="fa fa-language text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Language</h4>
+                            <p class="text-gray-700">Mandarin is the official language, but many in tourism speak basic English.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fa fa-pagelines mr-2"></i>Discover China
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exploring the wonders of China, from ancient history to modern marvels.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Destinations</h4>
+                    <ul class="space-y-2">
+                        <li><a href="beijing.html" class="text-gray-400 hover:text-white transition-colors">Beijing</a></li>
+                        <li><a href="tokyo.html" class="text-gray-400 hover:text-white transition-colors">Tokyo</a></li>
+                        <li><a href="seoul.html" class="text-gray-400 hover:text-white transition-colors">Seoul</a></li>
+                        <li><a href="bangkok.html" class="text-gray-400 hover:text-white transition-colors">Bangkok</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Travel Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.nationalgeographic.com/travel/destination/asia" class="text-gray-400 hover:text-white transition-colors">Travel Guides</a></li>
+                        <li><a href="https://www.selectiveasia.com/departure-lounge/entry-requirements" class="text-gray-400 hover:text-white transition-colors">Visa Information</a></li>
+                        <li><a href="https://www.airbnb.com" class="text-gray-400 hover:text-white transition-colors">Accommodation</a></li>
+                        <li><a href="https://12go.asia/en" class="text-gray-400 hover:text-white transition-colors">Transportation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">yucheukkit@hotmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+852 5614 1471</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">71 Hoi Yuen Rd, Kwun Tong, Hong Kong</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Discover China. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script src="beijing.js"></script>
+</body>
+</html>
