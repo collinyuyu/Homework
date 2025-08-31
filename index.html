@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Asia - Explore Amazing Destinations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#457B9D',
+                        accent: '#F1FAEE',
+                        dark: '#1D3557',
+                        light: '#A8DADC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-accent text-dark overflow-x-hidden">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../Homework/index.html" class="text-2xl font-bold text-white text-shadow flex items-center">
+                <i class="fa fa-pagelines mr-2"></i>Discover Asia
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-light transition-colors active">Home</a>
+                <a href="beijing.html" class="nav-link text-white hover:text-light transition-colors">Beijing</a>
+                <a href="tokyo.html" class="nav-link text-white hover:text-light transition-colors">Tokyo</a>
+                <a href="seoul.html" class="nav-link text-white hover:text-light transition-colors">Seoul</a>
+                <a href="bangkok.html" class="nav-link text-white hover:text-light transition-colors">Bangkok</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark/90 bg-blur">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2 active">Home</a>
+                <a href="beijing.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Beijing</a>
+                <a href="tokyo.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Tokyo</a>
+                <a href="seoul.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Seoul</a>
+                <a href="bangkok.html" class="mobile-nav-link text-white hover:text-light transition-colors py-2">Bangkok</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage Content -->
+    <section id="home" class="min-h-screen relative">
+        <!-- Hero Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://plus.unsplash.com/premium_photo-1712254285399-f5f181730830?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beautiful map of Asia" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/50"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
+            <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow leading-tight mb-6 max-w-4xl">
+                Explore the Wonders of Asia
+            </h1>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow mb-8 max-w-2xl">
+                Discover the capital city of China, Japan, South Korea and Thailand, with ancient traditions, breathtaking landscapes, and popular sites across these incredible cities.
+            </p>
+            <a href="#cities" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                Explore Destinations <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white animate-bounce">
+            <i class="fa fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+        
+        <!-- Featured Cities Section -->
+        <section id="cities" class="py-20 bg-accent">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center mb-16">
+                    Featured Destinations
+                </h2>
+                
+                <!-- Scrollable City Images -->
+                <div class="relative">
+                    <div class="overflow-x-auto scrollbar-hide pb-8">
+                        <div class="flex space-x-6 w-max">
+                            <!-- Beijing -->
+                            <a href="beijing.html" class="city-card group">
+                                <div class="relative w-80 h-96 rounded-xl overflow-hidden shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                                    <img src="https://images.unsplash.com/photo-1587825338028-f1d568e0dbb3?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beijing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 p-6">
+                                        <h3 class="text-2xl font-bold text-white mb-2">Beijing</h3>
+                                        <p class="text-light mb-4">The Historic Capital</p>
+                                        <span class="inline-block bg-primary/90 text-white text-sm py-1 px-3 rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            Explore <i class="fa fa-long-arrow-right ml-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Tokyo -->
+                            <a href="tokyo.html" class="city-card group">
+                                <div class="relative w-80 h-96 rounded-xl overflow-hidden shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tokyo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 p-6">
+                                        <h3 class="text-2xl font-bold text-white mb-2">Tokyo</h3>
+                                        <p class="text-light mb-4">Biggest City in Asia</p>
+                                        <span class="inline-block bg-primary/90 text-white text-sm py-1 px-3 rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            Explore <i class="fa fa-long-arrow-right ml-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Seoul -->
+                            <a href="seoul.html" class="city-card group">
+                                <div class="relative w-80 h-96 rounded-xl overflow-hidden shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                                    <img src="https://images.unsplash.com/photo-1729533035100-978b82f857bf?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Seoul" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 p-6">
+                                        <h3 class="text-2xl font-bold text-white mb-2">Seoul</h3>
+                                        <p class="text-light mb-4">Romantic City</p>
+                                        <span class="inline-block bg-primary/90 text-white text-sm py-1 px-3 rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            Explore <i class="fa fa-long-arrow-right ml-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Bangkok -->
+                            <a href="bangkok.html" class="city-card group">
+                                <div class="relative w-80 h-96 rounded-xl overflow-hidden shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                                    <img src="https://images.unsplash.com/photo-1598970605070-a38a6ccd3a2d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bangkok" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 p-6">
+                                        <h3 class="text-2xl font-bold text-white mb-2">Bangkok</h3>
+                                        <p class="text-light mb-4">City with Buddhist Temples</p>
+                                        <span class="inline-block bg-primary/90 text-white text-sm py-1 px-3 rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            Explore <i class="fa fa-long-arrow-right ml-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Scroll Arrows (Visible on medium screens and up) -->
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white/80 hover:bg-white text-dark w-10 h-10 rounded-full flex items-center justify-center shadow-lg md:flex hidden">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 bg-white/80 hover:bg-white text-dark w-10 h-10 rounded-full flex items-center justify-center shadow-lg md:flex hidden">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Visit Asia Section -->
+        <section id="why-visit-asia" class="py-20 bg-white relative z-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center mb-16">
+                    Why Visit Asia
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-accent rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-history text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Rich History</h3>
+                        <p class="text-gray-700">Explore 5,000 years of civilization with ancient temples, imperial palaces, and historic landmarks that tell the story of Asia's fascinating past.</p>
+                    </div>
+                    
+                    <div class="bg-accent rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-tree text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Breathtaking Nature</h3>
+                        <p class="text-gray-700">From towering mountains to serene rivers and lush forests, Asia boasts some of the most stunning natural landscapes in the world.</p>
+                    </div>
+                    
+                    <div class="bg-accent rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-cutlery text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Culinary Delights</h3>
+                        <p class="text-gray-700">Experience the diverse flavors of Asian cuisine, from spicy dishes to delicate specialties and everything in between across different regions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Showcase Section -->
+        <section class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center mb-16">
+                    Explore Asia Through Videos
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Video 1 -->
+                    <div class="group">
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/PaTxvetJmK8" allowfullscreen title="Video showcasing 10 BEST PLACES TO VISIT IN BEIJING"></iframe>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Beijing's Beautiful Landscapes</h3>
+                        <p class="text-gray-400">Discover the breathtaking natural beauty that makes Beijing a unique destination.</p>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="group">
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/I_qaccjrirc" allowfullscreen title="Video about Tokyo Travel Guide 2025"></iframe>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Metropolitan of Tokyo</h3>
+                        <p class="text-gray-400">Explore the business and tradition preserved in Tokyo's cultural sites.</p>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="group">
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/0JCGDm9NqzI" allowfullscreen title="Video showing a SEOUL TRAVEL GUIDE "></iframe>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Modern Seoul</h3>
+                        <p class="text-gray-400">Experience the energy and innovation of Seoul's bustling metropolitan centers.</p>
+                    </div>
+                    
+                    <!-- Video 4 -->
+                    <div class="group">
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/21mKbR-4VTA" allowfullscreen title="Video featuring Bangkok Vacation Travel Guide"></iframe>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Bangkok Journey</h3>
+                        <p class="text-gray-400">Take a tour through Bangkok's diverse and flavorful regional cuisines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fa fa-pagelines mr-2"></i>Discover Asia
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exploring the wonders of Asia, from ancient history to modern marvels.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Destinations</h4>
+                    <ul class="space-y-2">
+                        <li><a href="beijing.html" class="text-gray-400 hover:text-white transition-colors">Beijing</a></li>
+                        <li><a href="tokyo.html" class="text-gray-400 hover:text-white transition-colors">Tokyo</a></li>
+                        <li><a href="seoul.html" class="text-gray-400 hover:text-white transition-colors">Seoul</a></li>
+                        <li><a href="bangkok.html" class="text-gray-400 hover:text-white transition-colors">Bangkok</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Travel Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.nationalgeographic.com/travel/destination/asia" class="text-gray-400 hover:text-white transition-colors">Travel Guides</a></li>
+                        <li><a href="https://www.selectiveasia.com/departure-lounge/entry-requirements" class="text-gray-400 hover:text-white transition-colors">Visa Information</a></li>
+                        <li><a href="https://www.airbnb.com" class="text-gray-400 hover:text-white transition-colors">Accommodation</a></li>
+                        <li><a href="https://12go.asia/en" class="text-gray-400 hover:text-white transition-colors">Transportation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">yucheukkit@hotmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+852 5614 1471</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">71 Hoi Yuen Rd, Kwun Tong, Hong Kong</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Discover Asia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
